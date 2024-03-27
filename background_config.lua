@@ -1,5 +1,6 @@
 local module = {}
-local picturePath = '/home/gersain/Pictures'
+local user = os.getenv("USER")
+local picturePath = '/home/' .. user .. '/Pictures'
 
 function module.set_background(config)  
   -- The art is a bit too bright and colorful to be useful as a backdrop
