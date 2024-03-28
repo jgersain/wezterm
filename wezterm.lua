@@ -3,6 +3,7 @@ local wezterm = require 'wezterm'
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
+local act = wezterm.action
 
 local config = {}
 local backgroundConfig = require 'background_config'
@@ -33,6 +34,16 @@ config.keys = {
     mods = 'CTRL',
     action = wezterm.action.TogglePaneZoomState,
   },
+	{
+		key = 'UpArrow', 
+		mods = 'CTRL', 
+		action = act.ScrollByPage(-0.1)
+	},
+	{
+		key = 'DownArrow', 
+		mods = 'CTRL', 
+		action = act.ScrollByPage(0.1)
+	},
 }
 
 -- For example, changing the color scheme:
