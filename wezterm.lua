@@ -11,17 +11,21 @@ backgroundConfig.set_background(config)
 config.font =
   wezterm.font('JetBrains Mono', { weight = 'Bold' })
 config.font_size = 14.0
+config.inactive_pane_hsb = {
+  saturation = 0.9,
+  brightness = 0.6,
+}
 
 config.keys = {
   -- This will create a new split and run your default program inside it
   {
     key = 'RightArrow',
-    mods = 'SHIFT|ALT',
+    mods = 'ALT',
     action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
   },
 	{
     key = "DownArrow",  -- Key to trigger the action
-    mods = "SHIFT|ALT",  -- Modifier keys (SHIFT + ALT)
+    mods = "ALT",  -- Modifier keys (SHIFT + ALT)
     action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" },
   },
   {
