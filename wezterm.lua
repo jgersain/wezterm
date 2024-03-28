@@ -19,11 +19,16 @@ config.keys = {
     mods = 'SHIFT|ALT',
     action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
   },
-  -- {
-  --   key = ''
-  --   mods = 'CTRL',
-  --   action = wezterm.action.TogglePaneZoomState,
-  -- },
+	{
+    key = "DownArrow",  -- Key to trigger the action
+    mods = "SHIFT|ALT",  -- Modifier keys (SHIFT + ALT)
+    action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" },
+  },
+  {
+    key = 'z',
+    mods = 'CTRL',
+    action = wezterm.action.TogglePaneZoomState,
+  },
 }
 
 -- For example, changing the color scheme:
