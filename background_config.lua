@@ -13,14 +13,26 @@ function module.set_background(config)
   config.colors = {
     scrollbar_thumb = 'gray',
   }
-  config.background = {
-    {
-      source = {
-        File = picturePath .. '/terminal02.gif'
+  config.color_scheme = 'Github'
+  config.window_background_gradient = {
+    colors = { '#22524f', '#022f43' },
+    orientation = {
+      Radial = {
+        cx = 0.35,
+        cy = 0.35,
+        radius = 0.5,
       },
-      hsb = dimmer,
-    }
+      -- Linear = { angle = -45.0 }
+    },
   }
+  -- config.background = {
+  --   {
+  --     source = {
+  --       File = picturePath .. '/terminal02.gif'
+  --     },
+  --     hsb = dimmer,
+  --   }
+  -- }
   -- config.background = {
   --   -- This is the deepest/back-most layer. It will be rendered first
   --   {
