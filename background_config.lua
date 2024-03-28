@@ -15,7 +15,7 @@ function module.set_background(config)
   }
   config.color_scheme = 'Github'
   config.window_background_gradient = {
-    colors = { '#22524f', '#022f43' },
+    colors = { '#600B0B', '#0B0B60' },
     orientation = {
       Radial = {
         cx = 0.35,
