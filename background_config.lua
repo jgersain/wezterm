@@ -14,8 +14,10 @@ function module.set_background(config)
     scrollbar_thumb = 'gray',
   }
   config.color_scheme = 'Github'
+  -- Gradient setup
   config.window_background_gradient = {
-    colors = { '#600B0B', '#0B0B60' },
+    colors = { '#302b63', '#0f0c29' },
+    -- colors = { '#600B0B', '#0B0B60' },
     orientation = {
       Radial = {
         cx = 0.35,
@@ -25,6 +27,7 @@ function module.set_background(config)
       -- Linear = { angle = -45.0 }
     },
   }
+  -- Background gif setup
   -- config.background = {
   --   {
   --     source = {
@@ -32,6 +35,16 @@ function module.set_background(config)
   --     },
   --     hsb = dimmer,
   --   }
+  -- }
+  -- config.window_background_gradient = {
+  --   orientation = 'Vertical',
+  --   colors = {
+  --     '#0f0c29',
+  --     '#302b63',
+  --     '#0f0c29',
+  --   },
+  --   interpolation = 'Linear',
+  --   blend = 'Rgb',
   -- }
   -- config.background = {
   --   -- This is the deepest/back-most layer. It will be rendered first
