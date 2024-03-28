@@ -18,15 +18,14 @@ config.inactive_pane_hsb = {
 }
 
 config.keys = {
-  -- This will create a new split and run your default program inside it
   {
     key = 'RightArrow',
-    mods = 'ALT',
+    mods = 'SHIFT|ALT',
     action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
   },
 	{
-    key = "DownArrow",  -- Key to trigger the action
-    mods = "ALT",  -- Modifier keys (SHIFT + ALT)
+    key = "DownArrow",
+    mods = "SHIFT|ALT",
     action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" },
   },
   {
@@ -44,6 +43,26 @@ config.keys = {
 		mods = 'CTRL', 
 		action = act.ScrollByPage(0.1)
 	},
+	{
+    key = 'UpArrow',
+    mods = 'ALT',
+    action = act.ActivatePaneDirection 'Up',
+  },
+	{
+    key = 'DownArrow',
+    mods = 'ALT',
+    action = act.ActivatePaneDirection 'Down',
+  },
+	{
+    key = 'LeftArrow',
+    mods = 'ALT',
+    action = act.ActivatePaneDirection 'Left',
+  },
+  {
+    key = 'RightArrow',
+    mods = 'ALT',
+    action = act.ActivatePaneDirection 'Right',
+  },
 }
 
 -- For example, changing the color scheme:
