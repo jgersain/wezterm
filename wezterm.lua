@@ -17,6 +17,7 @@ config.inactive_pane_hsb = {
   brightness = 0.6,
 }
 
+config.scrollback_lines = 30000
 config.keys = {
   {
     key = 'RightArrow',
