@@ -1,5 +1,5 @@
 local module = {}
-local user = os.getenv("USER")
+local user = os.getenv("USER") or os.getenv("USERNAME")
 local picturePath = '/home/' .. user .. '/Pictures'
 
 function module.set_background(config)  
