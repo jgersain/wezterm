@@ -1,6 +1,27 @@
 local module = {}
-local user = os.getenv("USER") or os.getenv("USERNAME")
-local picturePath = '/home/' .. user .. '/Pictures'
+
+function getPicturePath()
+  local sys = package.config:sub(1, 1) == "\\" and "Windows" or "Linux"
+
+  local base_path
+  if sys == "Linux" then
+      base_path = "/home/"
+  elseif sys == "Windows" then
+      base_path = "C:/Users/"
+  else
+      error("No support")
+  end
+
+  local user = os.getenv("USER") or os.getenv("USERNAME")
+  if not user then
+      error("No se pudo determinar el usuario actual.")
+  end
+
+  local picture_path = base_path .. user .. "/Pictures"
+  picture_path = picture_path:gsub("\\", "/")
+
+  return picture_path
+end
 
 function module.set_background(config)  
   -- The art is a bit too bright and colorful to be useful as a backdrop
@@ -31,7 +52,7 @@ function module.set_background(config)
   config.background = {
     {
       source = {
-        File = picturePath .. '/terminal02.gif'
+        File = getPicturePath() .. '/terminal04.gif'
       },
       hsb = dimmer,
     }
