@@ -15,27 +15,27 @@ function module.set_background(config)
   }
   config.color_scheme = 'Github'
   -- Gradient setup
-  config.window_background_gradient = {
-    colors = { '#302b63', '#0f0c29' },
-    -- colors = { '#600B0B', '#0B0B60' },
-    orientation = {
-      Radial = {
-        cx = 0.35,
-        cy = 0.35,
-        radius = 0.5,
-      },
-      -- Linear = { angle = -45.0 }
-    },
-  }
-  -- Background gif setup
-  -- config.background = {
-  --   {
-  --     source = {
-  --       File = picturePath .. '/terminal02.gif'
+  -- config.window_background_gradient = {
+  --   colors = { '#302b63', '#0f0c29' },
+  --   -- colors = { '#600B0B', '#0B0B60' },
+  --   orientation = {
+  --     Radial = {
+  --       cx = 0.35,
+  --       cy = 0.35,
+  --       radius = 0.5,
   --     },
-  --     hsb = dimmer,
-  --   }
+  --     -- Linear = { angle = -45.0 }
+  --   },
   -- }
+  -- Background gif setup
+  config.background = {
+    {
+      source = {
+        File = picturePath .. '/terminal02.gif'
+      },
+      hsb = dimmer,
+    }
+  }
   -- config.window_background_gradient = {
   --   orientation = 'Vertical',
   --   colors = {
@@ -70,13 +70,13 @@ function module.set_background(config)
   --     },
   --     width = '100%',
   --     repeat_x = 'NoRepeat',
-
+  
   --     -- position the spins starting at the bottom, and repeating every
   --     -- two screens.
   --     vertical_align = 'Bottom',
   --     repeat_y_size = '200%',
   --     hsb = dimmer,
-
+  
   --     -- The parallax factor is higher than the background layer, so this
   --     -- one will appear to be closer when we scroll
   --     attachment = { Parallax = 0.2 },
@@ -87,7 +87,7 @@ function module.set_background(config)
   --     },
   --     width = '100%',
   --     repeat_x = 'NoRepeat',
-
+  
   --     -- start at 10% of the screen and repeat every 2 screens
   --     vertical_offset = '10%',
   --     repeat_y_size = '200%',
@@ -100,7 +100,7 @@ function module.set_background(config)
   --     },
   --     width = '100%',
   --     repeat_x = 'NoRepeat',
-
+  
   --     vertical_offset = '30%',
   --     repeat_y_size = '200%',
   --     hsb = dimmer,
@@ -112,7 +112,7 @@ function module.set_background(config)
   --     },
   --     width = '100%',
   --     repeat_x = 'NoRepeat',
-
+  
   --     vertical_offset = '50%',
   --     repeat_y_size = '150%',
   --     hsb = dimmer,
