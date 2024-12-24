@@ -9,6 +9,7 @@ local config = {}
 local backgroundConfig = require 'background_config'
 
 backgroundConfig.set_background(config)
+-- config.default_domain = 'WSL:Arch' -- wsl stuff
 config.font =
   wezterm.font('JetBrains Mono', { weight = 'Bold' })
 config.font_size = 14.0
