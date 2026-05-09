@@ -3,11 +3,9 @@ local act = wezterm.action
 
 local config = wezterm.config_builder()
 
--- Match VS Code's integrated terminal from the "Popping and Locking" theme.
-config.font = wezterm.font_with_fallback {
-  'Meslo LG S for Powerline',
-  'JetBrains Mono',
-}
+-- Match VS Code's terminal colors. Meslo LG S for Powerline is not installed
+-- locally, so use JetBrains Mono directly to avoid WezTerm's font warning.
+config.font = wezterm.font 'JetBrains Mono'
 config.font_size = 18.0
 
 config.colors = {
