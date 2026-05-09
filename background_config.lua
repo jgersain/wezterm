@@ -7,7 +7,7 @@ local function asset_path(relative_path)
 end
 
 function module.set_background(config)
-  local dimmer = { brightness = 0.1 }
+  local dimmer = { brightness = 0.04 }
 
   config.enable_scroll_bar = true
   config.min_scroll_bar_height = '2cell'
