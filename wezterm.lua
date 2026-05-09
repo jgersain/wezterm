@@ -3,6 +3,10 @@ local act = wezterm.action
 
 local config = wezterm.config_builder()
 
+if wezterm.target_triple:find('windows') then
+  config.default_prog = { 'wsl.exe', '--cd', '~' }
+end
+
 -- Match VS Code's terminal colors. Meslo LG S for Powerline is not installed
 -- locally, so use JetBrains Mono directly to avoid WezTerm's font warning.
 config.font = wezterm.font 'JetBrains Mono'
