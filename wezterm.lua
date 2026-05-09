@@ -1,5 +1,6 @@
 local wezterm = require 'wezterm'
 local act = wezterm.action
+local background_config = dofile(wezterm.config_dir .. '/background_config.lua')
 
 local config = wezterm.config_builder()
 
@@ -100,5 +101,7 @@ config.keys = {
     action = act.ActivatePaneDirection 'Right',
   },
 }
+
+background_config.set_background(config)
 
 return config
