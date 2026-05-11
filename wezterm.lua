@@ -8,10 +8,11 @@ if wezterm.target_triple:find('windows') then
   config.default_prog = { 'wsl.exe', '--cd', '~' }
 end
 
--- Match VS Code's terminal colors. Meslo LG S for Powerline is not installed
--- locally, so use JetBrains Mono directly to avoid WezTerm's font warning.
-config.font = wezterm.font 'JetBrains Mono'
-config.font_size = 18.0
+config.font = wezterm.font {
+  family = 'JetBrainsMono Nerd Font',
+  weight = 'DemiBold',
+}
+config.font_size = 16.0
 
 config.colors = {
   foreground = '#ebdbb2',
@@ -48,6 +49,9 @@ config.colors = {
 config.cursor_blink_rate = 800
 config.enable_scroll_bar = true
 config.min_scroll_bar_height = '2cell'
+config.max_fps = 120
+config.animation_fps = 60
+config.alternate_buffer_wheel_scroll_speed = 1
 config.inactive_pane_hsb = {
   saturation = 0.9,
   brightness = 0.6,
